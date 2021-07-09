@@ -19,7 +19,7 @@ mongoose
     useFindAndModify: false
   })
   .then(() => {
-    console.log('DB Connection is successful');
+    // console.log('DB Connection is successful');
   });
 
 //READ FILE
@@ -36,9 +36,9 @@ const importData = async () => {
     await User.create(users, { validateBeforeSave: false });
     await Tour.create(tours);
     await Review.create(reviews);
-    console.log('Data loaded Succesfully');
+    // console.log('Data loaded Succesfully');
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   process.exit();
 };
@@ -50,9 +50,9 @@ const deleteData = async () => {
     await Tour.deleteMany();
     await User.deleteMany();
     await Review.deleteMany();
-    console.log('data deleted');
+    // console.log('data deleted');
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
   process.exit();
 };

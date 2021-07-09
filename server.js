@@ -6,7 +6,7 @@ dotenv.config({ path: './config.env' });
 
 process.on('uncaughtException', err => {
   console.log(err.name, err.message);
-  console.log('UNCAUGHT Exception SHUTTING DOWN APPLICATION');
+  // console.log('UNCAUGHT Exception SHUTTING DOWN APPLICATION');
   process.exit(1);
 });
 
@@ -23,7 +23,7 @@ mongoose
     useFindAndModify: false
   })
   .then(() => {
-    console.log('DB Connection is successful');
+    // console.log('DB Connection is successful');
   });
 
 // creating a schema for our data
